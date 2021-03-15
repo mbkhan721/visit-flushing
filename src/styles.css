@@ -1,1 +1,122 @@
-/* Add application styles & imports to this file! */
+
+.jumbotron {
+  display: flex;
+ 
+  background-image: url('https://i.pinimg.com/originals/90/7b/18/907b18cffbe0409cc15b577c87ab886e.jpg');
+  background-size: cover;
+  color: #ffffff;
+  height: 670px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+  border-radius: 25px;
+  background-position: left top;
+  background-repeat: repeat;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 30px;
+
+}
+
+.jumbotron h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 130px;
+  margin-left: 80px;
+  color: #fff;
+}
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+.col-md-6 {
+  margin: 0 0 30px;
+}
+
+.btn.btn-primary {
+  border-radius: 2px;
+  border: 10px;
+  color: #509aee;
+  text-shadow: none;
+  background-color: #e5eaec;
+}
+
+.btn.btn-primary:hover {
+  color: #ffffff;
+  background-color: #81b388;
+}
+
+
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+  color: lightblue;
+  background-color: rgb(221, 216, 217);
+  width: 100%;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
+
+nav {
+  margin-left: 30px;
+}
+
+
+/* Opacity of feedback container over image */
+.container {
+  position: relative;
+  display: flex;
+}
+
+
+.container .content {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background: rgb(0, 0, 0); /* Fallback color */
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+
+}
+
+
+.button, button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: grey;
+  color: whitesmoke;
+  border: none;
+}
+
+p {
+  font-family: corbel;
+}

@@ -2,199 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Flushing, Queens</title>
+    <title>Flushing NY</title>
     <base href="/" />
-
-    <!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  margin-left: 25px;
-}
-
-header {
-  padding: 20px 0;
-  margin-left: 27px;
-  margin-right: 25px;
-}
-
-header .row,
-footer .row {
-  display: flex;
-  align-items: center;
-}
-
-header h1 {
-  font-weight: 700;
-  margin: 0;
-}
-
-header nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
-header p {
-  padding: 0 20px;
-  margin: 0;
-}
-
-.jumbotron {
-  display: flex;
- 
-  background-image: url('https://i.pinimg.com/originals/90/7b/18/907b18cffbe0409cc15b577c87ab886e.jpg');
-  background-size: cover;
-  color: #ffffff;
-  height: 670px;
-  text-shadow: 0.25px 0.25px 0.25px #000000;
-  border-radius: 25px;
-  background-position: left top;
-  background-repeat: repeat;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 30px;
-
-}
-
-.jumbotron h2 {
-  font-size: 50px;
-  font-weight: 700;
-  margin-top: 130px;
-  margin-left: 80px;
-  color: #fff;
-}
-
-.jumbotron h3 {
-  margin: 0 0 20px;
-  color: #fff;
-}
-
-section .row img {
-  margin: 0 0 30px;
-  width: 100%;
-}
-
-.col-md-6 {
-  margin: 0 0 30px;
-}
-
-.btn.btn-primary {
-  border-radius: 2px;
-  border: 10px;
-  color: #509aee;
-  text-shadow: none;
-  background-color: #e5eaec;
-}
-
-.btn.btn-primary:hover {
-  color: #ffffff;
-  background-color: #81b388;
-}
-
-
-
-footer {
-  font-size: 12px;
-  padding: 20px 0;
-  color: lightblue;
-  background-color: rgb(221, 216, 217);
-  width: 100%;
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-footer .col-sm-8 {
-  display: flex;
-  justify-content: flex-end;
-}
-
-footer ul {
-  list-style: none;
-}
-
-footer li img {
-  width: 32px;
-  height: 32px;
-}
-
-nav {
-  margin-left: 30px;
-}
-
-
-/* Opacity of feedback container over image */
-.container {
-  position: relative;
-  display: flex;
-}
-
-
-.container .content {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  background: rgb(0, 0, 0); /* Fallback color */
-  padding-right: 30px;
-  padding-left: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: whitesmoke;
-
-}
-
-
-.button, button {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 16px;
-  border-radius: 2px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: grey;
-  color: whitesmoke;
-  border: none;
-}
-
-</style>
-<body>
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/ngx-foundation@1.0.6/dist/css/ngx-foundation.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
   </head>
+  
+  <body>
+    <link href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css" rel="stylesheet">
+    <div class="w3-top w3-card " style="width:100%">
+      <div class="w3-bar w3-white w3-wide w3-card w3-padding-16">
+        <!-- Stays on the current page when clicked -->
+        <a [title]="'This is the main page!'" routerLink="/art" class="w3-bar-item w3-button"><b>Flushing</b> New York</a>
+      </div>
+    </div>
 
-
-<div class="w3-top w3-card w3-margin-bottom" style="width:100%">
-  <div class="w3-bar w3-white w3-wide w3-card w3-padding-16">
-    <!-- Stays on the current page when clicked -->
-    <a [title]="'This is the main page!'" routerLink="/art" class="w3-bar-item w3-button"><b>Flushing</b> New York</a>
-    <!-- Float links to the right. Hide them on small screens -->
-  </div>
-</div>
-
-<!-- Header / JSON data is stored in products.ts file -->
+<!-- Header Image -->
 <br>
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
   <img class="w3-image" src="https://i.pinimg.com/originals/90/7b/18/907b18cffbe0409cc15b577c87ab886e.jpg" alt="Architecture">
@@ -206,7 +31,7 @@ nav {
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
-  <!-- Project Section / JSON driven images  -->
+  <!-- Project Section  -->
   <div class="w3-container w3-padding-32" id="projects">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Features</h3>
   </div>
@@ -265,7 +90,7 @@ nav {
     </div>
   </div>
 
-  <!-- About Section / details are in JSON format from product.ts -->
+  <!-- About Section -->
   <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
     <p>Multicultural Flushing is home to the city’s largest Chinatown, with bustling sidewalks, a tumult of shops, and eateries serving soup dumplings to Taiwanese pancakes. Korean and Indian cultures are well represented too. Built in 1862, Flushing Town Hall now hosts jazz concerts, and several historic homes date to the 17th and 18th centuries. The Queens Botanical Garden is a 39-acre oasis with a focus on native plants.</p>
@@ -320,7 +145,7 @@ nav {
       <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
       <!-- Window alert when clicking submit button -->
-      <button [title]="'Click here to send a message'" (click)="share()">
+      <button [title]="Click here to send a message" (click)="share()">
     SEND MESSAGE
   </button>
 
@@ -333,7 +158,7 @@ nav {
 
 <!-- Footer -->
 <footer class="w3-center w3-grey w3-padding-16" style="margin-left:-3px">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>Developed by <a href="linkedin.com/in/muhammad-khan-21752a1a6" title="LinkedIn Profile" class="w3-hover-text-navy">Muhammad Khan</a></p>
 </footer>
 
   <body>
