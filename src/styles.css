@@ -88,7 +88,7 @@ nav {
 
 
 .container .content {
-  margin: 0;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,9 +97,10 @@ nav {
   background: rgb(0, 0, 0); /* Fallback color */
   padding-right: 30px;
   padding-left: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: whitesmoke;
-
+  border: solid rgba(223, 216, 216, 0.795) 1px;
+  border-radius: 25px;
 }
 
 
@@ -110,9 +111,8 @@ nav {
   border-radius: 2px;
   font-size: 14px;
   cursor: pointer;
-  background-color: grey;
-  color: whitesmoke;
-  border: none;
+  background-color: rgb(237, 233, 243);
+  color: rgb(231, 222, 222);
 }
 
 p {
