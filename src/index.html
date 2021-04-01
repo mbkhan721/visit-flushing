@@ -9,6 +9,67 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- API Endpoint Access using API Gateway -->
+    <script>
+    function submitToAPI(e) {
+       e.preventDefault();
+       var URL = "https://ahil5p6mwj.execute-api.us-east-1.amazonaws.com/Prod/userfeedbackresourceflushing";
+
+            var Namere = /[A-Za-z]{1}[A-Za-z]/;
+            if (!Namere.test($("#name-input").val())) {
+                         alert ("Name can not less than 2 char");
+                return;
+            }
+            var mobilere = /[0-9]{10}/;
+            if (!mobilere.test($("#phone-input").val())) {
+                alert ("Please enter valid mobile number");
+                return;
+            }
+            if ($("#email-input").val()=="") {
+                alert ("Please enter your email id");
+                return;
+            }
+
+            var reeamil = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+            if (!reeamil.test($("#email-input").val())) {
+                alert ("Please enter valid email address");
+                return;
+            }
+
+       var name = $("#name-input").val();
+       var phone = $("#phone-input").val();
+       var email = $("#email-input").val();
+       var desc = $("#description-input").val();
+       var data = {
+          name : name,
+          phone : phone,
+          email : email,
+          desc : desc
+        };
+
+       $.ajax({
+         type: "POST",
+         url : "https://ahil5p6mwj.execute-api.us-east-1.amazonaws.com/Prod/userfeedbackresourceflushing",
+         dataType: "json",
+         crossDomain: "true",
+         contentType: "application/json; charset=utf-8",
+         data: JSON.stringify(data),
+
+         
+         success: function () {
+           // clear form and show a success message
+           alert("Successfull");
+           document.getElementById("contact-form").reset();
+       location.reload();
+         },
+         error: function () {
+           // show an error message
+           alert("UnSuccessfull");
+         }});
+     }
+    </script>
+
   </head>
   
   <body>
@@ -22,7 +83,7 @@
 
 <!-- Header Image -->
 <br>
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+<header class="w3-display-container w3-content w3-wide" style="max-width:1200px;" id="home">
   <img class="w3-image" src="https://i.pinimg.com/originals/90/7b/18/907b18cffbe0409cc15b577c87ab886e.jpg" alt="Architecture">
   <div class="w3-display-middle w3-margin-top w3-center">
     <h1 class="w3-xxlarge w3-grey"><span class="w3-padding w3-black w3-opacity-min"><b>NYC</b></span> <span class="w3-hide-small w3-text-light-grey">from across the river</span></h1>
@@ -140,15 +201,18 @@
     <div class="content">
     <h3>Feedback to developer</h3>
     <h6>Lets get in touch and talk about your next neighborhood portfolio.</h6>
- 
-      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-      <!-- Window alert when clicking submit button -->
-      <button class="w3-button" [title]="Click here to send a message" (click)="share()">
-    SEND MESSAGE
-  </button>
+      <form id="contact-form" method="post">
+      <h4>Name:</h4>
+      <input type="text" id="name-input" placeholder="Enter name here…" class="form-control" style="width:50%;height:35px;" /><br/>
+      <h4>Phone:</h4>
+      <input type="phone" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:50%;height:35px;float:center;"/><br/>
+      <h4>Email:</h4>
+      <input type="email" id="email-input" placeholder="Enter email here…" class="form-control" style="width:50%;height:35px;"/><br/>
+      <h4>How can we help you?</h4>
+      <textarea id="description-input" rows="3" placeholder="Enter your message…" class="form-control" style="width:100%;"></textarea><br/>
+      <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div>
+      <button type="button" onClick="submitToAPI(event)" class="btn btn-lg">Submit</button>
+</form>
 
   </div>
 </div>
